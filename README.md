@@ -33,7 +33,7 @@ repos:
 - `go-fmt` - Runs `gofmt`, requires golang
 - `go-vet` - Runs `go vet`, requires golang
 - `go-lint` - Runs `golint`, requires https://github.com/golang/lint
-- `go-imports` - Runs `goimports`, requires golang.org/x/tools/cmd/goimports
+- `go-imports` - Runs `goimports`, requires https://golang.org/x/tools/cmd/goimports
 - `go-cyclo` - Runs `gocyclo`, require https://github.com/fzipp/gocyclo
 - `validate-toml` - Runs `tomlv`, requires
    https://github.com/BurntSushi/toml/tree/master/cmd/tomlv

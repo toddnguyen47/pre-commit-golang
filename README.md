@@ -8,6 +8,8 @@ golang hooks for http://pre-commit.com/
 
 Add this to your `.pre-commit-config.yaml`
 
+```yaml
+repos:
     - repo: git://github.com/dnephin/pre-commit-golang
       rev: master
       hooks:
@@ -24,6 +26,7 @@ Add this to your `.pre-commit-config.yaml`
         - id: go-unit-tests
         - id: go-build
         - id: go-mod-tidy
+```
 
 ### Available hooks
 

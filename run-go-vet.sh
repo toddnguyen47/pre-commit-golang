@@ -1,10 +1,12 @@
 #!/usr/bin/env bash
-set -e
+set -e -o pipefail
 
-printf "Arguments\n"
-echo $@
+_root_dir="$(git rev-parse --show-toplevel)"
 
-pkg=$(go list)
-for dir in $(echo $@|xargs -n1 dirname|sort -u); do
-  go vet $pkg/$dir
-done
+pushd "${_root_dir}" > /dev/null
+
+exec 5>&1
+output="$(go vet "$@" | tee /dev/fd/5)"
+[[ -z "$output" ]]
+
+popd > /dev/null

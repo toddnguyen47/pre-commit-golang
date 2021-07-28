@@ -56,6 +56,13 @@
     types: [go]
     language: 'script'
     description: "Runs `golangci-lint`, requires https://github.com/golangci/golangci-lint"
+-   id: golangci-lint-all-files
+    name: 'golangci-lint-all-files'
+    entry: run-golangci-lint.sh
+    types: [go]
+    language: 'script'
+    pass_filenames: false
+    description: "Runs `golangci-lint` on all files, requires https://github.com/golangci/golangci-lint"
 -   id: go-critic
     name: 'go-critic'
     entry: run-go-critic.sh

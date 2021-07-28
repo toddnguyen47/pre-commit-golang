@@ -22,6 +22,7 @@ repos:
         - id: validate-toml
         - id: no-go-testing
         - id: golangci-lint
+        - id: golangci-lint-all-files
         - id: go-critic
         - id: go-unit-tests
         - id: go-build
@@ -39,7 +40,9 @@ repos:
    https://github.com/BurntSushi/toml/tree/master/cmd/tomlv
 - `no-go-testing` - Checks that no files are using `testing.T`, if you want
   developers to use a different testing framework
-- `golangci-lint` - run `golangci-lint run ./...`, requires
+- `golangci-lint` - run `golangci-lint run <committed_files>` on committed files, requires
+  [golangci-lint](https://github.com/golangci/golangci-lint)
+- `golangci-lint-all-files` - run `golangci-lint run ./...`, requires
   [golangci-lint](https://github.com/golangci/golangci-lint)
 - `go-critic` - run `gocritic check ./...`, requires [go-critic](https://github.com/go-critic/go-critic)
 - `go-unit-tests` - run `go test -tags=unit -timeout 30s -short -v`

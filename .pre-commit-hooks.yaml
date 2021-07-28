@@ -58,7 +58,7 @@
     description: "Runs `golangci-lint`, requires https://github.com/golangci/golangci-lint"
 -   id: golangci-lint-all-files
     name: 'golangci-lint-all-files'
-    entry: run-golangci-lint.sh
+    entry: run-golangci-lint-all-files.sh
     types: [go]
     language: 'script'
     pass_filenames: false

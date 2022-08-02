@@ -8,9 +8,7 @@ golang hooks for http://pre-commit.com/
 
 Add this to your `.pre-commit-config.yaml`
 
-```yaml
-repos:
-    - repo: git://github.com/dnephin/pre-commit-golang
+    - repo: https://github.com/dnephin/pre-commit-golang
       rev: master
       hooks:
         - id: go-fmt
@@ -33,8 +31,8 @@ repos:
 
 - `go-fmt` - Runs `gofmt`, requires golang
 - `go-vet` - Runs `go vet`, requires golang
-- `go-lint` - Runs `golint`, requires https://github.com/golang/lint
-- `go-imports` - Runs `goimports`, requires https://golang.org/x/tools/cmd/goimports
+- `go-lint` - Runs `golint`, requires https://github.com/golang/lint but is unmaintained & deprecated in favour of [`golangci-lint`](https://github.com/golangci/golangci-lint)
+- `go-imports` - Runs `goimports`, requires golang.org/x/tools/cmd/goimports
 - `go-cyclo` - Runs `gocyclo`, require https://github.com/fzipp/gocyclo
 - `validate-toml` - Runs `tomlv`, requires
    https://github.com/BurntSushi/toml/tree/master/cmd/tomlv
